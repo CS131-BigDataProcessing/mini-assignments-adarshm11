@@ -1,0 +1,16 @@
+  993  ls
+  994  cd Lec02
+  995  grep -o "\bwor\w*" goodluck.txt
+  996  grep -o "\w*wor\w*" goodluck.txt
+  997  grep -o "\w*dred\w*" goodluck.txt
+  998  grep "Good luck, babe " goodluck.txt
+  999  ssh amallyafa24@172.20.25.9
+ 1000  ssh amallyafa24@172.20.25.9
+ 1001  grep -o "\bwor\w*" goodluck.txt
+ 1002  grep -o "\w*dred\w*" goodluck.txt
+ 1003  grep "Good luck, babe" goodluck.txt
+ 1004  wc goodluck.txt
+ 1005  wc -l goodluck.txt
+ 1006  wc goodluck.txt > Mallya-A_a2_counts.txt
+ 1007  ls
+ 1008  vi Mallya-A_a2_counts.txt
