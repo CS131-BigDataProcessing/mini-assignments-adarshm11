@@ -1,0 +1,26 @@
+1. What are all the airlines?
+
+The airlines are Alaska, American, Delta, Jet Blue, Southwest, and United.
+Used awk -F, 'NR>1 {print $4}' airline_stats.csv | sort | uniq
+
+2A. Which airlines have a carrier delay greater than 10? Print the names.
+
+Alaska
+American
+Delta
+Jet Blue
+Southwest
+United
+
+awk -F, '$1>10 {print $4}' airline_stats.csv | sort | uniq
+
+2B. Which airlines have a carrier delay greater than a certain threshold of 15? Print the names.
+
+Alaska
+American
+Delta
+Jet Blue
+Southwest
+United
+
+awk -v Threshold=15 -F, '{ if ($1>Threshold) print $4 }' airline_stats.csv | sort | uniq  
