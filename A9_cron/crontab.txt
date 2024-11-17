@@ -1,0 +1,3 @@
+0 2 * * * rm -rf /Users/adarsh/mini-assignments-adarshm11/A9_cron/temp_folder/*
+0 3 * * 0 tar -czf /Users/adarsh/backups/current_backup.tar.gz -C /Users/adarsh/ .
+30 8 * * * df -h | mail -s "Disk Usage Report" adarsh.mallya@sjsu.edu

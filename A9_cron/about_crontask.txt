@@ -1,0 +1,10 @@
+Answers to supplemental questions
+
+
+1. What other types of tasks (provide 2) could benefit from automation using cron or at?
+
+One example of a good utilization of cron for an automated task would be to clear log or cache files for a system every week at a specific time (likely around midnight on a weekend). This is a good use of automation because log files can be large and clearing them is an issue of system storage, which can be easily automated. Another example of using cron for a task would be to upgrade system packages automatically upon a time where a new version becomes available. This would be useful because it would automatically handle any bugs that may be there in the previous version without needing the user to experience these bugs before they realize a new version is available.
+
+2. What potential risks are there with poorly managed automated tasks, and how can you avoid them (e.g., ensuring backups work correctly)? 
+
+One potential risk with a task like a backup is that the previous backup could be deleted prior to the new backup being created, and if the new one fails, the entire backup history would be gone. This can be remedied by ensuring the previous backup is only deleted once the new backup is complete and verified. Another issue could be an automated script accidentally overwriting important data in a file, which could happen if these scripts store data in static filenames. To combat this, files can be stored using dynamic filenames, such as including a timestamp, to make sure older data isn't overwritten unintentionally.
