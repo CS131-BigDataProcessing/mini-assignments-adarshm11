@@ -1,15 +1,5 @@
 import pandas as pd
 
-def load_csv(csv_file_path):
-
-        try:
-                return pd.read_csv(csv_file_path)
-
-        except Exception as e:
-
-                raise IOError(f'Could not load CSV file. Error: {e}')
-
-
 
 def calculate_mean(df):
 	

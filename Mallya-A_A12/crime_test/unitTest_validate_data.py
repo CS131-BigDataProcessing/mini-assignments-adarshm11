@@ -1,6 +1,6 @@
 import unittest
-import validate_functions
-import stats_function
+from validate_functions import validate_vict_sex, validate_vict_age 
+from stats_function import calculate_mean, calculate_median
 import os
 import pandas as pd
 
@@ -12,24 +12,19 @@ class TestCrimeDataFunctions(unittest.TestCase):
 		if not os.path.exists(self.file_path):
 			raise FileNotFoundError(f'Error: could not find {self.file_path}.')
 		
-		self.dataframe = load_csv(self.file_path)
-	
-
-	def test_load_csv(self):
-		self.assertIsInstance(self.data, pd.DataFrame)
-
+		self.dataframe = pd.read_csv(self.file_path)
 		
 	def test_validate_vict_sex(self):
 		try:
 			df = validate_vict_sex(self.dataframe)
 			self.assertEqual(df['Vict Sex'].isnull().sum(), 0)
-			self.assertTrue(all(df['Vict Sex'].isin(['M', 'F'])	
+			self.assertTrue(all(df['Vict Sex'].isin(['M', 'F'])))	
 		except ValueError:
 			self.fail('Vict Sex could not be validated.')
 
 	def test_validate_vict_age(self):
 		try:
-			def = validate_vict_age(self.dataframe)
+			df = validate_vict_age(self.dataframe)
 			self.assertEqual(df['Vict Age'].isnull().sum(), 0)
 			self.assertTrue(all(df['Vict Age'].between(1, 100)))
 		except ValueError:

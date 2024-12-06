@@ -6,7 +6,6 @@ setup(
 	name='crime_test',
 	version='1.0.0',
 	package=find_packages(),
-modules
 	install_requires=[
 		'pandas',
 		'numpy',
